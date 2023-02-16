@@ -4,24 +4,19 @@ body {
 }
 
 .list {
-    color: black;
-    background-color: lightyellow;
+    color: rgb(128, 0, 32);
+    background-color: rgb(245, 245, 175);
     padding: 10px;
-    border: 2px solid gold;
+    border: 2px solid rgb(128, 0, 32);
     max-width: 500px;
 }
 
-.dayNight {
+.nightTime {
     background-color: rgb(5, 5, 41);
     color: aliceblue;
 }
 
-button {
-    color: black;
-    padding: 10px;
-    border-radius: 25px;
-    margin: 5px;
-    border: 2px solid gold;
-    background-color: lightyellow;
+.shop {
+    font-size: 25px;
     cursor: pointer;
 }

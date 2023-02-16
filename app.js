@@ -12,23 +12,32 @@ while (berry < 10) {
   count += berry + "... ";
   berry++;
   if(berry === 10){
-    count += berry + " strawberries! That's how many."
-}
-}
+    count += berry + " strawberries."
+}}
 document.getElementById("berryCount").innerHTML = count;
 
+const dayTime = document.querySelector("body");
+const dayText = document.getElementById("toggleText");
+
 function Switch() {
-  document.body.classList.toggle("dayNight");
-  var day = document.getElementById("dayTime");
-  if (day.innerHTML === "Click to Shop at Night") {
-    day.innerHTML = "Click to Shop at Daylight";
+  dayTime.classList.toggle("nightTime");
+  if (dayText.innerHTML === "Shop at Night") {
+    dayText.innerHTML = "Shop by Day";
   } else {
-    day.innerHTML = "Click to Shop at Night";
-  }
+    dayText.innerHTML = "Shop at Night";
+  }}
+
+const textStyle= document.getElementById("listHover");
+textStyle.addEventListener("mouseover", listHighlight);
+textStyle.addEventListener("mouseout", listReturn);
+
+function listHighlight(){
+  this.style.color = "black";
+  this.style.backgroundColor = "lightgray";
+  this.style.borderColor = "black";
 }
-
-
-function crossOut() {
-  const element = document.getElementById("grocery");
-  element.remove();
+function listReturn(){
+  this.style.color = "rgb(128, 0, 32)";
+  this.style.backgroundColor = "rgb(245, 245, 175)";
+  this.style.borderColor = "rgb(128, 0, 32)";
 }
